@@ -7,23 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4406615715A8FA989C266497 /* Pods_pruebaPractica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EE3B2BD34AD418C0ED00CF /* Pods_pruebaPractica.framework */; };
+		A75008E12912F7E80008B8E0 /* SelfiePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75008DF2912F7E80008B8E0 /* SelfiePopUpViewController.swift */; };
+		A75008E22912F7E80008B8E0 /* SelfiePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75008E02912F7E80008B8E0 /* SelfiePopUpViewController.xib */; };
+		A784328D29130B6000460DCF /* GraphPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328629130B6000460DCF /* GraphPresenter.swift */; };
+		A784328F29130B6000460DCF /* GraphProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328829130B6000460DCF /* GraphProtocols.swift */; };
+		A784329029130B6000460DCF /* GraphInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328929130B6000460DCF /* GraphInteractor.swift */; };
+		A784329129130B6000460DCF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328A29130B6000460DCF /* GraphView.swift */; };
+		A784329229130B6000460DCF /* GraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328B29130B6000460DCF /* GraphService.swift */; };
+		A784329329130B6000460DCF /* GraphWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328C29130B6000460DCF /* GraphWireFrame.swift */; };
+		A784329B291313AF00460DCF /* GraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7843299291313AF00460DCF /* GraphView.xib */; };
+		A7B2F3CA2912DAD80001BF34 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3C82912DAD80001BF34 /* HomeView.xib */; };
+		A7B2F3CF2912E25D0001BF34 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F3CD2912E25D0001BF34 /* TextFieldTableViewCell.swift */; };
+		A7B2F3D02912E25D0001BF34 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3CE2912E25D0001BF34 /* TextFieldTableViewCell.xib */; };
+		A7B2F3D32912E3420001BF34 /* SelfieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F3D12912E3420001BF34 /* SelfieTableViewCell.swift */; };
+		A7B2F3D42912E3420001BF34 /* SelfieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3D22912E3420001BF34 /* SelfieTableViewCell.xib */; };
+		A7B2F3D72912E4230001BF34 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F3D52912E4230001BF34 /* GraphTableViewCell.swift */; };
+		A7B2F3D82912E4230001BF34 /* GraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3D62912E4230001BF34 /* GraphTableViewCell.xib */; };
 		A7BBCA892912C9A200C50047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCA882912C9A200C50047 /* AppDelegate.swift */; };
-		A7BBCA8B2912C9A200C50047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCA8A2912C9A200C50047 /* SceneDelegate.swift */; };
-		A7BBCA8D2912C9A200C50047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCA8C2912C9A200C50047 /* ViewController.swift */; };
-		A7BBCA902912C9A200C50047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BBCA8E2912C9A200C50047 /* Main.storyboard */; };
 		A7BBCA922912C9A300C50047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BBCA912912C9A300C50047 /* Assets.xcassets */; };
 		A7BBCA952912C9A300C50047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BBCA932912C9A300C50047 /* LaunchScreen.storyboard */; };
+		A7BBCAA42912D70C00C50047 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCA9D2912D70C00C50047 /* HomePresenter.swift */; };
+		A7BBCAA62912D70C00C50047 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCA9F2912D70C00C50047 /* HomeProtocols.swift */; };
+		A7BBCAA72912D70C00C50047 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCAA02912D70C00C50047 /* HomeInteractor.swift */; };
+		A7BBCAA82912D70C00C50047 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCAA12912D70C00C50047 /* HomeView.swift */; };
+		A7BBCAA92912D70C00C50047 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCAA22912D70C00C50047 /* HomeService.swift */; };
+		A7BBCAAA2912D70C00C50047 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBCAA32912D70C00C50047 /* HomeWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71EE3B2BD34AD418C0ED00CF /* Pods_pruebaPractica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pruebaPractica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7811842187BC5660CB553C24 /* Pods-pruebaPractica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaPractica.debug.xcconfig"; path = "Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica.debug.xcconfig"; sourceTree = "<group>"; };
+		A75008DF2912F7E80008B8E0 /* SelfiePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiePopUpViewController.swift; sourceTree = "<group>"; };
+		A75008E02912F7E80008B8E0 /* SelfiePopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfiePopUpViewController.xib; sourceTree = "<group>"; };
+		A784328629130B6000460DCF /* GraphPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenter.swift; sourceTree = "<group>"; };
+		A784328829130B6000460DCF /* GraphProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphProtocols.swift; sourceTree = "<group>"; };
+		A784328929130B6000460DCF /* GraphInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphInteractor.swift; sourceTree = "<group>"; };
+		A784328A29130B6000460DCF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		A784328B29130B6000460DCF /* GraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphService.swift; sourceTree = "<group>"; };
+		A784328C29130B6000460DCF /* GraphWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWireFrame.swift; sourceTree = "<group>"; };
+		A7843299291313AF00460DCF /* GraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphView.xib; sourceTree = "<group>"; };
+		A7B2F3C82912DAD80001BF34 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		A7B2F3CD2912E25D0001BF34 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		A7B2F3CE2912E25D0001BF34 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		A7B2F3D12912E3420001BF34 /* SelfieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieTableViewCell.swift; sourceTree = "<group>"; };
+		A7B2F3D22912E3420001BF34 /* SelfieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfieTableViewCell.xib; sourceTree = "<group>"; };
+		A7B2F3D52912E4230001BF34 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		A7B2F3D62912E4230001BF34 /* GraphTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphTableViewCell.xib; sourceTree = "<group>"; };
 		A7BBCA852912C9A200C50047 /* pruebaPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BBCA882912C9A200C50047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7BBCA8A2912C9A200C50047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A7BBCA8C2912C9A200C50047 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A7BBCA8F2912C9A200C50047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7BBCA912912C9A300C50047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7BBCA942912C9A300C50047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7BBCA962912C9A300C50047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BBCA9D2912D70C00C50047 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A7BBCA9F2912D70C00C50047 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		A7BBCAA02912D70C00C50047 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		A7BBCAA12912D70C00C50047 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A7BBCAA22912D70C00C50047 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		A7BBCAA32912D70C00C50047 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
+		C57A6701F85969EF65FC9B09 /* Pods-pruebaPractica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaPractica.release.xcconfig"; path = "Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,98 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4406615715A8FA989C266497 /* Pods_pruebaPractica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FEFFC897514F631FD9E7BBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71EE3B2BD34AD418C0ED00CF /* Pods_pruebaPractica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DAA07F52A7137599DA42A46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7811842187BC5660CB553C24 /* Pods-pruebaPractica.debug.xcconfig */,
+				C57A6701F85969EF65FC9B09 /* Pods-pruebaPractica.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A75008DE2912F7B00008B8E0 /* Pop-up */ = {
+			isa = PBXGroup;
+			children = (
+				A75008DF2912F7E80008B8E0 /* SelfiePopUpViewController.swift */,
+				A75008E02912F7E80008B8E0 /* SelfiePopUpViewController.xib */,
+			);
+			path = "Pop-up";
+			sourceTree = "<group>";
+		};
+		A784328529130B4E00460DCF /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				A784328629130B6000460DCF /* GraphPresenter.swift */,
+				A784328829130B6000460DCF /* GraphProtocols.swift */,
+				A784328929130B6000460DCF /* GraphInteractor.swift */,
+				A784328A29130B6000460DCF /* GraphView.swift */,
+				A784328B29130B6000460DCF /* GraphService.swift */,
+				A784328C29130B6000460DCF /* GraphWireFrame.swift */,
+				A7843299291313AF00460DCF /* GraphView.xib */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		A784329C2913365400460DCF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A7BBCA882912C9A200C50047 /* AppDelegate.swift */,
+				A7BBCA932912C9A300C50047 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A7B2F3CB2912E07D0001BF34 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A75008DE2912F7B00008B8E0 /* Pop-up */,
+				A7B2F3CC2912E2190001BF34 /* HomeCells */,
+				A7BBCA9D2912D70C00C50047 /* HomePresenter.swift */,
+				A7BBCA9F2912D70C00C50047 /* HomeProtocols.swift */,
+				A7BBCAA02912D70C00C50047 /* HomeInteractor.swift */,
+				A7BBCAA12912D70C00C50047 /* HomeView.swift */,
+				A7BBCAA22912D70C00C50047 /* HomeService.swift */,
+				A7BBCAA32912D70C00C50047 /* HomeWireFrame.swift */,
+				A7B2F3C82912DAD80001BF34 /* HomeView.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A7B2F3CC2912E2190001BF34 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				A7B2F3CD2912E25D0001BF34 /* TextFieldTableViewCell.swift */,
+				A7B2F3CE2912E25D0001BF34 /* TextFieldTableViewCell.xib */,
+				A7B2F3D12912E3420001BF34 /* SelfieTableViewCell.swift */,
+				A7B2F3D22912E3420001BF34 /* SelfieTableViewCell.xib */,
+				A7B2F3D52912E4230001BF34 /* GraphTableViewCell.swift */,
+				A7B2F3D62912E4230001BF34 /* GraphTableViewCell.xib */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
 		A7BBCA7C2912C9A200C50047 = {
 			isa = PBXGroup;
 			children = (
 				A7BBCA872912C9A200C50047 /* pruebaPractica */,
 				A7BBCA862912C9A200C50047 /* Products */,
+				9DAA07F52A7137599DA42A46 /* Pods */,
+				7FEFFC897514F631FD9E7BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +179,21 @@
 		A7BBCA872912C9A200C50047 /* pruebaPractica */ = {
 			isa = PBXGroup;
 			children = (
-				A7BBCA882912C9A200C50047 /* AppDelegate.swift */,
-				A7BBCA8A2912C9A200C50047 /* SceneDelegate.swift */,
-				A7BBCA8C2912C9A200C50047 /* ViewController.swift */,
-				A7BBCA8E2912C9A200C50047 /* Main.storyboard */,
+				A784329C2913365400460DCF /* SupportingFiles */,
+				A7BBCA9C2912D6E400C50047 /* Modules */,
 				A7BBCA912912C9A300C50047 /* Assets.xcassets */,
-				A7BBCA932912C9A300C50047 /* LaunchScreen.storyboard */,
 				A7BBCA962912C9A300C50047 /* Info.plist */,
 			);
 			path = pruebaPractica;
+			sourceTree = "<group>";
+		};
+		A7BBCA9C2912D6E400C50047 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A784328529130B4E00460DCF /* Graph */,
+				A7B2F3CB2912E07D0001BF34 /* Home */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7BBCA992912C9A300C50047 /* Build configuration list for PBXNativeTarget "pruebaPractica" */;
 			buildPhases = (
+				C0D818CF6211DF60EC05C856 /* [CP] Check Pods Manifest.lock */,
 				A7BBCA812912C9A200C50047 /* Sources */,
 				A7BBCA822912C9A200C50047 /* Frameworks */,
 				A7BBCA832912C9A200C50047 /* Resources */,
@@ -126,35 +256,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BBCA952912C9A300C50047 /* LaunchScreen.storyboard in Resources */,
+				A7B2F3CA2912DAD80001BF34 /* HomeView.xib in Resources */,
+				A7B2F3D82912E4230001BF34 /* GraphTableViewCell.xib in Resources */,
+				A784329B291313AF00460DCF /* GraphView.xib in Resources */,
+				A75008E22912F7E80008B8E0 /* SelfiePopUpViewController.xib in Resources */,
 				A7BBCA922912C9A300C50047 /* Assets.xcassets in Resources */,
-				A7BBCA902912C9A200C50047 /* Main.storyboard in Resources */,
+				A7B2F3D42912E3420001BF34 /* SelfieTableViewCell.xib in Resources */,
+				A7B2F3D02912E25D0001BF34 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0D818CF6211DF60EC05C856 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pruebaPractica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7BBCA812912C9A200C50047 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BBCA8D2912C9A200C50047 /* ViewController.swift in Sources */,
 				A7BBCA892912C9A200C50047 /* AppDelegate.swift in Sources */,
-				A7BBCA8B2912C9A200C50047 /* SceneDelegate.swift in Sources */,
+				A75008E12912F7E80008B8E0 /* SelfiePopUpViewController.swift in Sources */,
+				A784329029130B6000460DCF /* GraphInteractor.swift in Sources */,
+				A7BBCAA62912D70C00C50047 /* HomeProtocols.swift in Sources */,
+				A7BBCAA82912D70C00C50047 /* HomeView.swift in Sources */,
+				A784328F29130B6000460DCF /* GraphProtocols.swift in Sources */,
+				A7B2F3CF2912E25D0001BF34 /* TextFieldTableViewCell.swift in Sources */,
+				A784329329130B6000460DCF /* GraphWireFrame.swift in Sources */,
+				A784329129130B6000460DCF /* GraphView.swift in Sources */,
+				A7BBCAA92912D70C00C50047 /* HomeService.swift in Sources */,
+				A7B2F3D32912E3420001BF34 /* SelfieTableViewCell.swift in Sources */,
+				A7B2F3D72912E4230001BF34 /* GraphTableViewCell.swift in Sources */,
+				A784329229130B6000460DCF /* GraphService.swift in Sources */,
+				A7BBCAA42912D70C00C50047 /* HomePresenter.swift in Sources */,
+				A784328D29130B6000460DCF /* GraphPresenter.swift in Sources */,
+				A7BBCAA72912D70C00C50047 /* HomeInteractor.swift in Sources */,
+				A7BBCAAA2912D70C00C50047 /* HomeWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A7BBCA8E2912C9A200C50047 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7BBCA8F2912C9A200C50047 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A7BBCA932912C9A300C50047 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +450,7 @@
 		};
 		A7BBCA9A2912C9A300C50047 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7811842187BC5660CB553C24 /* Pods-pruebaPractica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,9 +461,9 @@
 				INFOPLIST_FILE = pruebaPractica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +479,7 @@
 		};
 		A7BBCA9B2912C9A300C50047 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C57A6701F85969EF65FC9B09 /* Pods-pruebaPractica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,9 +490,9 @@
 				INFOPLIST_FILE = pruebaPractica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

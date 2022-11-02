@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="496" id="KGk-i7-Jjw" customClass="GraphTableViewCell" customModule="pruebaPractica" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="496"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="496"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfa-9y-ABj">
+                        <rect key="frame" x="4" y="4" width="380" height="488"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grafíca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqx-Zz-RAc">
+                                <rect key="frame" x="16" y="16" width="55" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-UL-J4Z">
+                                <rect key="frame" x="16" y="52.5" width="348" height="419.5"/>
+                                <mutableString key="text">Una gráfica o representación gráfica es un tipo de representación de datos, generalmente numéricos, mediante recursos visuales (líneas, vectores, superficies o símbolos), para que se manifieste visualmente la relación matemática o correlación estadística que guardan entre sí. También es el nombre de un conjunto de puntos que se plasman en coordenadas cartesianas y sirven para analizar el comportamiento de un proceso o un conjunto de elementos o signos que permiten la interpretación de un fenómeno. La representación gráfica permite establecer valores que no se han obtenido experimentalmente sino mediante la interpolación (lectura entre puntos) y la extrapolación (valores fuera del intervalo experimental).</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uqx-Zz-RAc" firstAttribute="leading" secondItem="Yfa-9y-ABj" secondAttribute="leading" constant="16" id="1Cg-H9-khJ"/>
+                            <constraint firstItem="xz3-UL-J4Z" firstAttribute="top" secondItem="uqx-Zz-RAc" secondAttribute="bottom" constant="16" id="HqL-rc-xfS"/>
+                            <constraint firstItem="xz3-UL-J4Z" firstAttribute="leading" secondItem="Yfa-9y-ABj" secondAttribute="leading" constant="16" id="O60-Lj-Fb2"/>
+                            <constraint firstAttribute="bottom" secondItem="xz3-UL-J4Z" secondAttribute="bottom" constant="16" id="Pmi-Lt-QrQ"/>
+                            <constraint firstItem="uqx-Zz-RAc" firstAttribute="top" secondItem="Yfa-9y-ABj" secondAttribute="top" constant="16" id="hO1-xI-OFg"/>
+                            <constraint firstAttribute="trailing" secondItem="xz3-UL-J4Z" secondAttribute="trailing" constant="16" id="n6k-jB-dlA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Yfa-9y-ABj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="GMH-aT-sOO"/>
+                    <constraint firstAttribute="bottom" secondItem="Yfa-9y-ABj" secondAttribute="bottom" constant="4" id="Oo1-8Y-BwL"/>
+                    <constraint firstItem="Yfa-9y-ABj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="ZVE-Ke-cAi"/>
+                    <constraint firstAttribute="trailing" secondItem="Yfa-9y-ABj" secondAttribute="trailing" constant="4" id="foJ-Z3-qxL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="Yfa-9y-ABj" id="jSe-OU-G8w"/>
+            </connections>
+            <point key="canvasLocation" x="82.608695652173921" y="162.72321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
