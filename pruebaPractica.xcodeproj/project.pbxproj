@@ -17,6 +17,17 @@
 		A784329229130B6000460DCF /* GraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328B29130B6000460DCF /* GraphService.swift */; };
 		A784329329130B6000460DCF /* GraphWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328C29130B6000460DCF /* GraphWireFrame.swift */; };
 		A784329B291313AF00460DCF /* GraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7843299291313AF00460DCF /* GraphView.xib */; };
+		A78432A029133B6E00460DCF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784329F29133B6E00460DCF /* APIRequest.swift */; };
+		A78432A229133CAA00460DCF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432A129133CAA00460DCF /* APIConstants.swift */; };
+		A78432A429133D9600460DCF /* GraphEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432A329133D9600460DCF /* GraphEntity.swift */; };
+		A78432AC2913502200460DCF /* GraphReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432AA2913502200460DCF /* GraphReportTableViewCell.swift */; };
+		A78432AD2913502200460DCF /* GraphReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78432AB2913502200460DCF /* GraphReportTableViewCell.xib */; };
+		A78432B4291356D600460DCF /* RoundedChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B3291356D600460DCF /* RoundedChart.swift */; };
+		A78432B62913582F00460DCF /* CALayer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B52913582F00460DCF /* CALayer+Ext.swift */; };
+		A78432B82913585900460DCF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B72913585900460DCF /* Animations.swift */; };
+		A78432BA29135CB800460DCF /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B929135CB800460DCF /* UITableView+Ext.swift */; };
+		A78432BD291361E200460DCF /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78432BC291361E200460DCF /* AnswerView.xib */; };
+		A78432BF2913650E00460DCF /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432BE2913650E00460DCF /* AnswerView.swift */; };
 		A7B2F3CA2912DAD80001BF34 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3C82912DAD80001BF34 /* HomeView.xib */; };
 		A7B2F3CF2912E25D0001BF34 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F3CD2912E25D0001BF34 /* TextFieldTableViewCell.swift */; };
 		A7B2F3D02912E25D0001BF34 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F3CE2912E25D0001BF34 /* TextFieldTableViewCell.xib */; };
@@ -47,6 +58,17 @@
 		A784328B29130B6000460DCF /* GraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphService.swift; sourceTree = "<group>"; };
 		A784328C29130B6000460DCF /* GraphWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWireFrame.swift; sourceTree = "<group>"; };
 		A7843299291313AF00460DCF /* GraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphView.xib; sourceTree = "<group>"; };
+		A784329F29133B6E00460DCF /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		A78432A129133CAA00460DCF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		A78432A329133D9600460DCF /* GraphEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphEntity.swift; sourceTree = "<group>"; };
+		A78432AA2913502200460DCF /* GraphReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphReportTableViewCell.swift; sourceTree = "<group>"; };
+		A78432AB2913502200460DCF /* GraphReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphReportTableViewCell.xib; sourceTree = "<group>"; };
+		A78432B3291356D600460DCF /* RoundedChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedChart.swift; sourceTree = "<group>"; };
+		A78432B52913582F00460DCF /* CALayer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Ext.swift"; sourceTree = "<group>"; };
+		A78432B72913585900460DCF /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		A78432B929135CB800460DCF /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		A78432BC291361E200460DCF /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
+		A78432BE2913650E00460DCF /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		A7B2F3C82912DAD80001BF34 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		A7B2F3CD2912E25D0001BF34 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A7B2F3CE2912E25D0001BF34 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
@@ -109,12 +131,15 @@
 		A784328529130B4E00460DCF /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				A784328629130B6000460DCF /* GraphPresenter.swift */,
-				A784328829130B6000460DCF /* GraphProtocols.swift */,
-				A784328929130B6000460DCF /* GraphInteractor.swift */,
+				A78432BB2913611E00460DCF /* Components */,
+				A78432A529134E5800460DCF /* GraphCells */,
 				A784328A29130B6000460DCF /* GraphView.swift */,
-				A784328B29130B6000460DCF /* GraphService.swift */,
+				A784328929130B6000460DCF /* GraphInteractor.swift */,
+				A784328629130B6000460DCF /* GraphPresenter.swift */,
+				A78432A329133D9600460DCF /* GraphEntity.swift */,
 				A784328C29130B6000460DCF /* GraphWireFrame.swift */,
+				A784328829130B6000460DCF /* GraphProtocols.swift */,
+				A784328B29130B6000460DCF /* GraphService.swift */,
 				A7843299291313AF00460DCF /* GraphView.xib */,
 			);
 			path = Graph;
@@ -127,6 +152,68 @@
 				A7BBCA932912C9A300C50047 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A784329D2913369200460DCF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A7BBCA912912C9A300C50047 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A784329E29133B3B00460DCF /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				A784329F29133B6E00460DCF /* APIRequest.swift */,
+				A78432A129133CAA00460DCF /* APIConstants.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		A78432A529134E5800460DCF /* GraphCells */ = {
+			isa = PBXGroup;
+			children = (
+				A78432AA2913502200460DCF /* GraphReportTableViewCell.swift */,
+				A78432AB2913502200460DCF /* GraphReportTableViewCell.xib */,
+			);
+			path = GraphCells;
+			sourceTree = "<group>";
+		};
+		A78432AE2913552F00460DCF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A78432B2291356C700460DCF /* Charts */,
+				A78432AF2913553800460DCF /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A78432AF2913553800460DCF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A78432B52913582F00460DCF /* CALayer+Ext.swift */,
+				A78432B929135CB800460DCF /* UITableView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A78432B2291356C700460DCF /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				A78432B3291356D600460DCF /* RoundedChart.swift */,
+				A78432B72913585900460DCF /* Animations.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		A78432BB2913611E00460DCF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A78432BC291361E200460DCF /* AnswerView.xib */,
+				A78432BE2913650E00460DCF /* AnswerView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A7B2F3CB2912E07D0001BF34 /* Home */ = {
@@ -179,9 +266,11 @@
 		A7BBCA872912C9A200C50047 /* pruebaPractica */ = {
 			isa = PBXGroup;
 			children = (
+				A78432AE2913552F00460DCF /* Utils */,
+				A784329E29133B3B00460DCF /* Api */,
+				A784329D2913369200460DCF /* Assets */,
 				A784329C2913365400460DCF /* SupportingFiles */,
 				A7BBCA9C2912D6E400C50047 /* Modules */,
-				A7BBCA912912C9A300C50047 /* Assets.xcassets */,
 				A7BBCA962912C9A300C50047 /* Info.plist */,
 			);
 			path = pruebaPractica;
@@ -207,6 +296,7 @@
 				A7BBCA812912C9A200C50047 /* Sources */,
 				A7BBCA822912C9A200C50047 /* Frameworks */,
 				A7BBCA832912C9A200C50047 /* Resources */,
+				BE6DA65C48EB993E1B18F796 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,11 +347,13 @@
 			files = (
 				A7BBCA952912C9A300C50047 /* LaunchScreen.storyboard in Resources */,
 				A7B2F3CA2912DAD80001BF34 /* HomeView.xib in Resources */,
+				A78432BD291361E200460DCF /* AnswerView.xib in Resources */,
 				A7B2F3D82912E4230001BF34 /* GraphTableViewCell.xib in Resources */,
 				A784329B291313AF00460DCF /* GraphView.xib in Resources */,
 				A75008E22912F7E80008B8E0 /* SelfiePopUpViewController.xib in Resources */,
 				A7BBCA922912C9A300C50047 /* Assets.xcassets in Resources */,
 				A7B2F3D42912E3420001BF34 /* SelfieTableViewCell.xib in Resources */,
+				A78432AD2913502200460DCF /* GraphReportTableViewCell.xib in Resources */,
 				A7B2F3D02912E25D0001BF34 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +361,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BE6DA65C48EB993E1B18F796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C0D818CF6211DF60EC05C856 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,20 +409,29 @@
 			files = (
 				A7BBCA892912C9A200C50047 /* AppDelegate.swift in Sources */,
 				A75008E12912F7E80008B8E0 /* SelfiePopUpViewController.swift in Sources */,
+				A78432BF2913650E00460DCF /* AnswerView.swift in Sources */,
 				A784329029130B6000460DCF /* GraphInteractor.swift in Sources */,
+				A78432A429133D9600460DCF /* GraphEntity.swift in Sources */,
 				A7BBCAA62912D70C00C50047 /* HomeProtocols.swift in Sources */,
 				A7BBCAA82912D70C00C50047 /* HomeView.swift in Sources */,
+				A78432A229133CAA00460DCF /* APIConstants.swift in Sources */,
+				A78432BA29135CB800460DCF /* UITableView+Ext.swift in Sources */,
 				A784328F29130B6000460DCF /* GraphProtocols.swift in Sources */,
 				A7B2F3CF2912E25D0001BF34 /* TextFieldTableViewCell.swift in Sources */,
 				A784329329130B6000460DCF /* GraphWireFrame.swift in Sources */,
 				A784329129130B6000460DCF /* GraphView.swift in Sources */,
+				A78432AC2913502200460DCF /* GraphReportTableViewCell.swift in Sources */,
+				A78432B4291356D600460DCF /* RoundedChart.swift in Sources */,
 				A7BBCAA92912D70C00C50047 /* HomeService.swift in Sources */,
+				A78432B82913585900460DCF /* Animations.swift in Sources */,
 				A7B2F3D32912E3420001BF34 /* SelfieTableViewCell.swift in Sources */,
 				A7B2F3D72912E4230001BF34 /* GraphTableViewCell.swift in Sources */,
 				A784329229130B6000460DCF /* GraphService.swift in Sources */,
 				A7BBCAA42912D70C00C50047 /* HomePresenter.swift in Sources */,
+				A78432B62913582F00460DCF /* CALayer+Ext.swift in Sources */,
 				A784328D29130B6000460DCF /* GraphPresenter.swift in Sources */,
 				A7BBCAA72912D70C00C50047 /* HomeInteractor.swift in Sources */,
+				A78432A029133B6E00460DCF /* APIRequest.swift in Sources */,
 				A7BBCAAA2912D70C00C50047 /* HomeWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

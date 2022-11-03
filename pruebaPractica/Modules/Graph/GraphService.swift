@@ -10,6 +10,9 @@ import Foundation
 
 class GraphService:GraphServiceInputProtocol {
     
-    var interactor: GraphServiceOutputProtocol?
-    
+    func getReport(completion: @escaping(_ response: Result<Report, APIRequest.HTTPErrors>) -> Void) {
+        let url = "\(APIConstants.getBaseURL())dev.reports.files/test.json"
+        APIRequest.requestGet(url: url, completion: completion)
+        }
+
 }

@@ -25,6 +25,10 @@ class HomePresenter  {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    func openGraphModule() {
+        wireFrame?.openGraphModule()
+    }
+    
     func openPhotoModal(image: UIImage?) {
         wireFrame?.openPhotoModal(image: image)
     }

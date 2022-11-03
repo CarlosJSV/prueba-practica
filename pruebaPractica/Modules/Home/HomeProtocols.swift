@@ -18,6 +18,7 @@ protocol HomeWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createHomeModule() -> UIViewController
     func openPhotoModal(image: UIImage?)
+    func openGraphModule()
 }
 
 protocol HomePresenterProtocol: AnyObject {
@@ -28,6 +29,8 @@ protocol HomePresenterProtocol: AnyObject {
     
     func viewDidLoad()
     func openPhotoModal(image: UIImage?)
+    func openGraphModule()
+
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {

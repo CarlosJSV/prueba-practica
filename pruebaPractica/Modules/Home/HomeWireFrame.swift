@@ -33,18 +33,17 @@ class HomeWireFrame: HomeWireFrameProtocol {
     
     func openPhotoModal(image: UIImage?) {
         let vc = SelfiePopUpViewController(nibName: "SelfiePopUpViewController", bundle: nil)
-        
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         vc.image = image
         if let view = viewController as? SelfiePopUpViewControllerDelegate {
             vc.delegate = view
         }
-        
         viewController?.present(vc, animated: true)
     }
     
-    
-    
+    func openGraphModule() {
+        viewController?.navigationController?.pushViewController(GraphWireFrame.createGraphModule(), animated: false)
+    }
 
 }

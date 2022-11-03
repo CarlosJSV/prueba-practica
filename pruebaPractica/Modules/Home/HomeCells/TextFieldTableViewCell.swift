@@ -21,12 +21,18 @@ extension ReusableCell {
     }
 }
 
+protocol TextFieldTableViewCellDelegate {
+    func setName(name: String)
+}
+
 
 class TextFieldTableViewCell: UITableViewCell, ReusableCell {
 
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nameTf: UITextField!
+    
+    var delegate: TextFieldTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,11 +67,7 @@ extension TextFieldTableViewCell {
     func validateName(_ textField: UITextField, _ range: NSRange, _ string: String) -> Bool {
         let regEx = "[A-Za-zÁÉÍÓÚáéíóúñÑ ]"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regEx)
-        if predicate.evaluate(with: string) || string == ""{
-            return true
-        }
-        
-        return false
+        return predicate.evaluate(with: string) || string == ""
     }
 }
 
@@ -79,5 +81,11 @@ extension TextFieldTableViewCell: UITextFieldDelegate {
         default:
             return false
         }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        delegate?.setName(name: nameTf.text ?? "")
+        
     }
 }

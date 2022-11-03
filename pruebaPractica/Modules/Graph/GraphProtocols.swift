@@ -12,11 +12,13 @@ import UIKit
 protocol GraphViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: GraphPresenterProtocol? { get set }
+    func setData(report: Report)
 }
 
 protocol GraphWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createGraphModule() -> UIViewController
+    func showAlertError(_ title: String, _ message: String)
 }
 
 protocol GraphPresenterProtocol: AnyObject {
@@ -30,20 +32,21 @@ protocol GraphPresenterProtocol: AnyObject {
 
 protocol GraphInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
+    func showErrorRequest(title: String, message: String)
+    func setReport(report: Report)
 }
 
 protocol GraphInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: GraphInteractorOutputProtocol? { get set }
     var service: GraphServiceInputProtocol? { get set }
+    
+    func getData()
 }
 
 
 protocol GraphServiceInputProtocol: AnyObject {
     // INTERACTOR -> SERVICE
-    var interactor: GraphServiceOutputProtocol? { get set }
+    func getReport(completion: @escaping(_ response: Result<Report, APIRequest.HTTPErrors>) -> Void)
 }
 
-protocol GraphServiceOutputProtocol: AnyObject {
-    // SERVICE -> INTERACTOR
-}

@@ -32,9 +32,18 @@ extension GraphPresenter: GraphPresenterProtocol {
 
     // TODO: implement presenter methods
     func viewDidLoad() {
+        interactor?.getData()
     }
 }
 
 extension GraphPresenter: GraphInteractorOutputProtocol {
+    func setReport(report: Report) {
+        view?.setData(report: report)
+    }
+    
+    func showErrorRequest(title: String, message: String) {
+        wireFrame?.showAlertError(title, message)
+    }
+    
     // TODO: implement interactor output methods
 }

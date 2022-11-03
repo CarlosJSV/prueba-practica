@@ -14,8 +14,15 @@ class GraphInteractor: GraphInteractorInputProtocol {
     weak var presenter: GraphInteractorOutputProtocol?
     var service: GraphServiceInputProtocol?
 
-}
+    func getData() {
+        service?.getReport {Result in
+            switch Result {
+            case .success(let report):
+                self.presenter?.setReport(report: report)
 
-extension GraphInteractor: GraphServiceOutputProtocol {
-    // TODO: Implement use case methods
+            case .failure(let error):
+                self.presenter?.showErrorRequest(title: "Algo salio mal", message: error.localizedDescription)
+            }
+        }
+    }
 }

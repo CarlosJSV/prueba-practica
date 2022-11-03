@@ -6,5 +6,6 @@ target 'pruebaPractica' do
   use_frameworks!
 
   # Pods for pruebaPractica
+  pod 'Alamofire', '5.6.1'
 
 end

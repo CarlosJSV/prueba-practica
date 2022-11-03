@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol GraphTableViewCellDelegate {
+    func setName(userName: String)
+}
+
 class GraphTableViewCell: UITableViewCell, ReusableCell {
 
     @IBOutlet weak var containerView: UIView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()

@@ -17,6 +17,7 @@ class HomeView: UIViewController {
     // MARK: Properties
     var presenter: HomePresenterProtocol?
     var image: UIImage?
+    var name: String?
 
     // MARK: Lifecycle
 
@@ -54,16 +55,34 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource{
         print(indexPath.row)
         switch indexPath.row {
         case 0:
-            print("hola")
-            let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as? TextFieldTableViewCell
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as? TextFieldTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.delegate = self
+  
+            let bgColorView = UIView()
+            bgColorView.backgroundColor = UIColor.white
+            cell.selectedBackgroundView = bgColorView
+
+            return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SelfieTableViewCell.identifier, for: indexPath) as? SelfieTableViewCell
-            cell?.delegate = self
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SelfieTableViewCell.identifier, for: indexPath) as? SelfieTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.delegate = self
+            let bgColorView = UIView()
+            bgColorView.backgroundColor = UIColor.white
+            cell.selectedBackgroundView = bgColorView
+            return cell
         case 2:
-           let cell = tableView.dequeueReusableCell(withIdentifier: GraphTableViewCell.identifier, for: indexPath) as? GraphTableViewCell
-            return cell ?? UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: GraphTableViewCell.identifier, for: indexPath) as? GraphTableViewCell else {
+                return UITableViewCell()
+            }
+            let bgColorView = UIView()
+            bgColorView.backgroundColor = UIColor.white
+            cell.selectedBackgroundView = bgColorView
+            return cell
         default:
             return UITableViewCell()
         }
@@ -72,6 +91,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2 {
+            presenter?.openGraphModule()
         }
     }
 
@@ -88,12 +108,14 @@ extension HomeView: SelfieTableViewCellDelegate {
     }
 }
 
-extension HomeView: SelfiePopUpViewControllerDelegate {
-    func setImage(image: UIImage) {
-        print(image)
-        self.image = image
+extension HomeView: SelfiePopUpViewControllerDelegate, TextFieldTableViewCellDelegate {
+    func setName(name: String) {
+        self.name = name
     }
     
+    func setImage(image: UIImage) {
+        self.image = image
+    }
     
 }
 
