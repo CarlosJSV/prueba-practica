@@ -18,7 +18,9 @@ class SelfiePopUpViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var takeButton: UIButton!
     @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var galleryButton: UIButton!
     
+    var imagePicker = UIImagePickerController()
     var image: UIImage?
     var delegate: SelfiePopUpViewControllerDelegate?
 
@@ -32,7 +34,7 @@ class SelfiePopUpViewController: UIViewController {
         closeButton.layer.cornerRadius = closeButton.frame.height / 2
         takeButton.layer.cornerRadius = takeButton.frame.height / 2
         showButton.layer.cornerRadius = showButton.frame.height / 2
-        
+        galleryButton.layer.cornerRadius = galleryButton.frame.height / 2
         if let _ = self.image {
             showButton.isHidden = false
             takeButton.setTitle("Retomar", for: .normal)
@@ -52,14 +54,48 @@ class SelfiePopUpViewController: UIViewController {
     }
     
     @IBAction func onClickTake(_ sender: Any) {
-                let vc = UIImagePickerController()
-                vc.sourceType = .camera
-                //vc.allowsEditing = true
-                vc.cameraDevice = .front
-                vc.delegate = self
-                present(vc, animated: true)
-
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)){
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.cameraDevice = .front
+            vc.delegate = self
+            present(vc, animated: true)
+        }else{
+            let alertWarning = UIAlertController(title: "Advertencia", message: "No cuenta con camara", preferredStyle: .alert)
+            
+            alertWarning.modalTransitionStyle = .crossDissolve
+            alertWarning.modalPresentationStyle = .overCurrentContext
+            alertWarning.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("Accepted")
+            }))
+            
+            self.present(alertWarning, animated: true)
+        }
+    
     }
+    
+    @IBAction func onClickGallery(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                 print("Button capture")
+
+                 imagePicker.delegate = self
+                 imagePicker.sourceType = .savedPhotosAlbum
+                 imagePicker.allowsEditing = false
+
+                 present(imagePicker, animated: true, completion: nil)
+        }else{
+            let alertWarning = UIAlertController(title: "Advertencia", message: "No se tiene permisos para acceder", preferredStyle: .alert)
+            
+            alertWarning.modalTransitionStyle = .crossDissolve
+            alertWarning.modalPresentationStyle = .overCurrentContext
+            alertWarning.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("Accepted")
+            }))
+            
+            self.present(alertWarning, animated: true)
+        }
+    }
+    
 }
 
 extension SelfiePopUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -71,8 +107,14 @@ extension SelfiePopUpViewController: UINavigationControllerDelegate, UIImagePick
             return
         }
         self.image = image
+        if self.selfieImage.isHidden == false {
+            DispatchQueue.main.async {
+                self.selfieImage.image = image
+            }
+        }
         self.showButton.isHidden = false
         takeButton.setTitle("Retomar", for: .normal)
         self.delegate?.setImage(image: image)
     }
+    
 }

@@ -45,5 +45,18 @@ class HomeWireFrame: HomeWireFrameProtocol {
     func openGraphModule() {
         viewController?.navigationController?.pushViewController(GraphWireFrame.createGraphModule(), animated: false)
     }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.modalTransitionStyle = .crossDissolve
+        alert.modalPresentationStyle = .overCurrentContext
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default, handler: { _ in
+            print("error")
+        }))
+        viewController?.present(alert, animated: true)
+        
+    }
 
 }

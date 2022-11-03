@@ -25,6 +25,10 @@ class HomePresenter  {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    func uploadPhoto(image: UIImage, name: String) {
+        interactor?.uploadPhoto(image: image, name: name)
+    }
+    
     func openGraphModule() {
         wireFrame?.openGraphModule()
     }
@@ -36,8 +40,17 @@ extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
     }
+    
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
+    func finishUploadImage() {
+        view?.finishUploadImage()
+    }
+    
     // TODO: implement interactor output methods
+    func showAlert(title: String, message: String) {
+        wireFrame?.showAlert(title: title, message: message)
+    }
+    
 }

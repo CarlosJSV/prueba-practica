@@ -32,7 +32,7 @@
                             <constraint firstAttribute="width" secondItem="xke-EM-KJp" secondAttribute="height" multiplier="1:1" id="6eY-lJ-wOP"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHf-WN-1pC">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XHf-WN-1pC">
                         <rect key="frame" x="24" y="295.5" width="272" height="32.5"/>
                     </stackView>
                 </subviews>

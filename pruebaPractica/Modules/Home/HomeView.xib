@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="pruebaPractica" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="lyV-Bf-utz" id="71d-vT-KLT"/>
                 <outlet property="sendButton" destination="a6Z-2w-ARH" id="xXE-g4-VMI"/>
                 <outlet property="tableView" destination="3Tn-RO-Owm" id="BAK-0M-raZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,18 +35,31 @@
                     <buttonConfiguration key="configuration" style="plain" title="Enviar">
                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onClickSend:" destination="-1" eventType="touchUpInside" id="uya-BK-fTE"/>
+                    </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lyV-Bf-utz">
+                    <rect key="frame" x="187" y="433" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lyV-Bf-utz" secondAttribute="height" multiplier="1:1" id="wja-fu-KHb"/>
+                        <constraint firstAttribute="height" constant="40" id="z9v-AO-exO"/>
+                    </constraints>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="a6Z-2w-ARH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="0OT-cK-AT9"/>
+                <constraint firstItem="lyV-Bf-utz" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="0SQ-rv-EbW"/>
                 <constraint firstItem="3Tn-RO-Owm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AAh-OO-W1U"/>
                 <constraint firstItem="a6Z-2w-ARH" firstAttribute="top" secondItem="3Tn-RO-Owm" secondAttribute="bottom" constant="34" id="Tej-9E-S0V"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Tn-RO-Owm" secondAttribute="trailing" constant="16" id="a1I-fP-bAd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a6Z-2w-ARH" secondAttribute="bottom" constant="16" id="dRF-yf-q5m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a6Z-2w-ARH" secondAttribute="trailing" constant="34" id="doH-Bp-lhW"/>
                 <constraint firstItem="a6Z-2w-ARH" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.13" id="hx4-lA-fZT"/>
+                <constraint firstItem="lyV-Bf-utz" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="n9P-uF-4X5"/>
                 <constraint firstItem="3Tn-RO-Owm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="tku-Ff-mVy"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>

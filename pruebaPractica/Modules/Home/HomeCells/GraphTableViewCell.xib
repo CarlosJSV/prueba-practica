@@ -52,6 +52,7 @@
                     <constraint firstAttribute="trailing" secondItem="Yfa-9y-ABj" secondAttribute="trailing" constant="4" id="foJ-Z3-qxL"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="containerView" destination="Yfa-9y-ABj" id="jSe-OU-G8w"/>
             </connections>

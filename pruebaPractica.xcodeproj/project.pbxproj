@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4406615715A8FA989C266497 /* Pods_pruebaPractica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EE3B2BD34AD418C0ED00CF /* Pods_pruebaPractica.framework */; };
+		A721320929142F0800516065 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A721320829142F0800516065 /* GoogleService-Info.plist */; };
+		A721320B291444A600516065 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721320A291444A600516065 /* UIColor+Ext.swift */; };
 		A75008E12912F7E80008B8E0 /* SelfiePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75008DF2912F7E80008B8E0 /* SelfiePopUpViewController.swift */; };
 		A75008E22912F7E80008B8E0 /* SelfiePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75008E02912F7E80008B8E0 /* SelfiePopUpViewController.xib */; };
 		A784328D29130B6000460DCF /* GraphPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784328629130B6000460DCF /* GraphPresenter.swift */; };
@@ -23,8 +25,6 @@
 		A78432AC2913502200460DCF /* GraphReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432AA2913502200460DCF /* GraphReportTableViewCell.swift */; };
 		A78432AD2913502200460DCF /* GraphReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78432AB2913502200460DCF /* GraphReportTableViewCell.xib */; };
 		A78432B4291356D600460DCF /* RoundedChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B3291356D600460DCF /* RoundedChart.swift */; };
-		A78432B62913582F00460DCF /* CALayer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B52913582F00460DCF /* CALayer+Ext.swift */; };
-		A78432B82913585900460DCF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B72913585900460DCF /* Animations.swift */; };
 		A78432BA29135CB800460DCF /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432B929135CB800460DCF /* UITableView+Ext.swift */; };
 		A78432BD291361E200460DCF /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78432BC291361E200460DCF /* AnswerView.xib */; };
 		A78432BF2913650E00460DCF /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78432BE2913650E00460DCF /* AnswerView.swift */; };
@@ -49,6 +49,8 @@
 /* Begin PBXFileReference section */
 		71EE3B2BD34AD418C0ED00CF /* Pods_pruebaPractica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pruebaPractica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7811842187BC5660CB553C24 /* Pods-pruebaPractica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaPractica.debug.xcconfig"; path = "Target Support Files/Pods-pruebaPractica/Pods-pruebaPractica.debug.xcconfig"; sourceTree = "<group>"; };
+		A721320829142F0800516065 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A721320A291444A600516065 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A75008DF2912F7E80008B8E0 /* SelfiePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiePopUpViewController.swift; sourceTree = "<group>"; };
 		A75008E02912F7E80008B8E0 /* SelfiePopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfiePopUpViewController.xib; sourceTree = "<group>"; };
 		A784328629130B6000460DCF /* GraphPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenter.swift; sourceTree = "<group>"; };
@@ -64,8 +66,6 @@
 		A78432AA2913502200460DCF /* GraphReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphReportTableViewCell.swift; sourceTree = "<group>"; };
 		A78432AB2913502200460DCF /* GraphReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphReportTableViewCell.xib; sourceTree = "<group>"; };
 		A78432B3291356D600460DCF /* RoundedChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedChart.swift; sourceTree = "<group>"; };
-		A78432B52913582F00460DCF /* CALayer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Ext.swift"; sourceTree = "<group>"; };
-		A78432B72913585900460DCF /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		A78432B929135CB800460DCF /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		A78432BC291361E200460DCF /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		A78432BE2913650E00460DCF /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		A78432AF2913553800460DCF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A78432B52913582F00460DCF /* CALayer+Ext.swift */,
 				A78432B929135CB800460DCF /* UITableView+Ext.swift */,
+				A721320A291444A600516065 /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				A78432B3291356D600460DCF /* RoundedChart.swift */,
-				A78432B72913585900460DCF /* Animations.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -272,6 +271,7 @@
 				A784329C2913365400460DCF /* SupportingFiles */,
 				A7BBCA9C2912D6E400C50047 /* Modules */,
 				A7BBCA962912C9A300C50047 /* Info.plist */,
+				A721320829142F0800516065 /* GoogleService-Info.plist */,
 			);
 			path = pruebaPractica;
 			sourceTree = "<group>";
@@ -353,6 +353,7 @@
 				A75008E22912F7E80008B8E0 /* SelfiePopUpViewController.xib in Resources */,
 				A7BBCA922912C9A300C50047 /* Assets.xcassets in Resources */,
 				A7B2F3D42912E3420001BF34 /* SelfieTableViewCell.xib in Resources */,
+				A721320929142F0800516065 /* GoogleService-Info.plist in Resources */,
 				A78432AD2913502200460DCF /* GraphReportTableViewCell.xib in Resources */,
 				A7B2F3D02912E25D0001BF34 /* TextFieldTableViewCell.xib in Resources */,
 			);
@@ -422,13 +423,12 @@
 				A784329129130B6000460DCF /* GraphView.swift in Sources */,
 				A78432AC2913502200460DCF /* GraphReportTableViewCell.swift in Sources */,
 				A78432B4291356D600460DCF /* RoundedChart.swift in Sources */,
+				A721320B291444A600516065 /* UIColor+Ext.swift in Sources */,
 				A7BBCAA92912D70C00C50047 /* HomeService.swift in Sources */,
-				A78432B82913585900460DCF /* Animations.swift in Sources */,
 				A7B2F3D32912E3420001BF34 /* SelfieTableViewCell.swift in Sources */,
 				A7B2F3D72912E4230001BF34 /* GraphTableViewCell.swift in Sources */,
 				A784329229130B6000460DCF /* GraphService.swift in Sources */,
 				A7BBCAA42912D70C00C50047 /* HomePresenter.swift in Sources */,
-				A78432B62913582F00460DCF /* CALayer+Ext.swift in Sources */,
 				A784328D29130B6000460DCF /* GraphPresenter.swift in Sources */,
 				A7BBCAA72912D70C00C50047 /* HomeInteractor.swift in Sources */,
 				A78432A029133B6E00460DCF /* APIRequest.swift in Sources */,

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 
 class GraphReportTableViewCell: UITableViewCell, ReusableCell {
 
@@ -14,10 +14,12 @@ class GraphReportTableViewCell: UITableViewCell, ReusableCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerSv: UIStackView!
     
-    private var randomValue: CGFloat { CGFloat.random(7) }
-    private var segmentsCount = 4
-    private let colors: [UIColor] = [.blue, .systemPink, .yellow,
-                                     .red, .green, .purple]
+    private var answers: [Answer]!
+    private let colors: [UIColor] = [.blue, .red, .yellow,
+                                     .orange, .green, .purple]
+    var tempValues: [(CGFloat, UIColor)] = []
+    var ref: DatabaseReference!
+
     private var values: [(CGFloat, UIColor)]! {
         didSet {
             pieView.setup(values: values)
@@ -26,35 +28,55 @@ class GraphReportTableViewCell: UITableViewCell, ReusableCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupReference()
     }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        setValues(for: segmentsCount)
+        values = tempValues
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         answerSv.subviews.forEach({ $0.removeFromSuperview() })
+        tempValues = []
     }
     
-    private func setValues(for count: Int) {
-        values = (0...count - 1).map { (randomValue, colors[$0]) }
-        //values.append((1.0, colors[0]))
+    private func setupReference(){
+        ref = Database.database().reference()
+
+        ref.child("screenColors").child("GraphView").observe(DataEventType.value, with: {[weak self] snapshot in
+            if let color = snapshot.value {
+                self?.backgroundColor = UIColor(hexString: color as! String)
+            }
+        })
     }
     
     public func setData(test: Test) {
         self.questionLabel.text = test.question
-        self.segmentsCount = test.answer.count
-        
-        test.answer.forEach({_ in
-            let v = AnswerView.loadViewFromNib()
+        self.answers = test.answer
+        setAnswer()
+    }
+    
+    private func setAnswer() {
+        for index in stride(from: 0, to: answers.count, by: 2){
             
-            answerSv.addArrangedSubview(v)
-        })
-        
+            tempValues.append((CGFloat(answers[index].value),colors[index]))
 
+            let v = AnswerView.loadViewFromNib()
+            v.firstLabel.text = "\(answers[index].label) \(answers[index].value)%"
+            v.firstView.backgroundColor = colors[index]
+            if index + 1 <= answers.count{
+                v.secondLabel.text = "\(answers[index + 1].label) \(answers[index + 1].value)%"
+                v.secondView.backgroundColor = colors[index + 1]
+
+            tempValues.append((CGFloat(answers[index + 1].value),colors[index + 1]))
+
+            }else{
+                v.secondAnswerSv.isHidden = true
+            }
+            answerSv.addArrangedSubview(v)
+        }
     }
     
 }

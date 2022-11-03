@@ -12,6 +12,7 @@ import UIKit
 protocol HomeViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: HomePresenterProtocol? { get set }
+    func finishUploadImage()
 }
 
 protocol HomeWireFrameProtocol: AnyObject {
@@ -19,6 +20,7 @@ protocol HomeWireFrameProtocol: AnyObject {
     static func createHomeModule() -> UIViewController
     func openPhotoModal(image: UIImage?)
     func openGraphModule()
+    func showAlert(title: String, message: String)
 }
 
 protocol HomePresenterProtocol: AnyObject {
@@ -30,17 +32,22 @@ protocol HomePresenterProtocol: AnyObject {
     func viewDidLoad()
     func openPhotoModal(image: UIImage?)
     func openGraphModule()
+    func uploadPhoto(image: UIImage, name: String)
+    func showAlert(title: String, message: String)
 
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
+    func showAlert(title: String, message: String)
+    func finishUploadImage()
 }
 
 protocol HomeInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: HomeInteractorOutputProtocol? { get set }
     var service: HomeServiceInputProtocol? { get set }
+    func uploadPhoto(image: UIImage, name: String)
 }
 
 protocol HomeServiceInputProtocol: AnyObject {

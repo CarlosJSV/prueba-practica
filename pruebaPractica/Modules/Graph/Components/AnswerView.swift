@@ -11,6 +11,10 @@ class AnswerView: UIView {
 
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    
+    @IBOutlet weak var secondAnswerSv: UIStackView!
     
     override func draw(_ rect: CGRect) {
         firstView.layer.cornerRadius = 10

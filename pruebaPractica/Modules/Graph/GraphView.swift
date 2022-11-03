@@ -6,8 +6,9 @@
 //  
 //
 
-import Foundation
 import UIKit
+import FirebaseDatabase
+
 
 class GraphView: UIViewController {
 
@@ -15,24 +16,35 @@ class GraphView: UIViewController {
     // MARK: Properties
     var presenter: GraphPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityInd: UIActivityIndicatorView!
     
     var report: Report?
+    var ref: DatabaseReference!
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        setupUI()
+        self.activityInd.startAnimating()
+        setupReference()
         setupTableView()
+        self.title = "Grafícas"
     }
     
-    func setupUI() {
-        
+    private func setupReference(){
+        ref = Database.database().reference()
+
+        ref.child("screenColors").child("GraphView").observe(DataEventType.value, with: {[weak self] snapshot in
+            if let color = snapshot.value {
+                self?.view.backgroundColor = UIColor(hexString: color as! String)
+            }
+        })
     }
 }
 
 extension GraphView: GraphViewProtocol {
     func setData(report: Report) {
+        self.activityInd.stopAnimating()
         self.report = report
         self.tableView.reloadData("Sin reportes")
     }
@@ -49,6 +61,7 @@ extension GraphView: UITableViewDelegate, UITableViewDataSource{
         tableView.dataSource = self
         tableView.register(GraphReportTableViewCell.nibName, forCellReuseIdentifier: GraphReportTableViewCell.identifier)
         tableView.separatorColor = .clear
+        tableView.allowsSelection = false
         
     }
     

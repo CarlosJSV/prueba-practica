@@ -56,7 +56,13 @@ class TextFieldTableViewCell: UITableViewCell, ReusableCell {
         containerView.layer.shadowRadius = 4.0
         
         nameTf.delegate = self
-        nameTf.layer.cornerRadius = 12
+        nameTf.layer.borderWidth = 0.1
+        nameTf.layer.borderColor = UIColor.lightGray.cgColor
+        nameTf.layer.shadowOpacity = 0.3
+        nameTf.layer.shadowRadius = 8.0
+        nameTf.layer.shadowOffset = CGSize.zero
+        nameTf.layer.shadowColor = UIColor.lightGray.cgColor
+        
     }
     
     
@@ -74,6 +80,7 @@ extension TextFieldTableViewCell {
 
 // MARK: - Delegates
 extension TextFieldTableViewCell: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
         case nameTf:
@@ -84,8 +91,8 @@ extension TextFieldTableViewCell: UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
         delegate?.setName(name: nameTf.text ?? "")
-        
     }
+    
+    
 }

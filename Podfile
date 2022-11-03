@@ -7,5 +7,9 @@ target 'pruebaPractica' do
 
   # Pods for pruebaPractica
   pod 'Alamofire', '5.6.1'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseDatabase'
+  pod 'FirebaseStorage'
+  pod 'IQKeyboardManagerSwift', '6.5.6'
 
 end
