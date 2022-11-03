@@ -69,7 +69,6 @@ class RoundedChart: UIView {
         
         layer.addSublayer(chartLayer)
         
-        //chartLayer.applyClockWipeMaskAnimation(duration: 1.7)
     }
     
     func clear() {

@@ -9,12 +9,16 @@ import UIKit
 
 class AnswerView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    
     override func draw(_ rect: CGRect) {
-        // Drawing code
+        firstView.layer.cornerRadius = 10
+        secondView.layer.cornerRadius = 10
     }
-    */
+    static func loadViewFromNib() -> AnswerView {
+        let nib = UINib(nibName: "AnswerView", bundle: nil)
+        return nib.instantiate(withOwner: self, options: nil).first as! AnswerView
+    }
 
 }

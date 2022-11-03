@@ -51,6 +51,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="answerSv" destination="XHf-WN-1pC" id="una-jB-IVd"/>
                 <outlet property="pieView" destination="xke-EM-KJp" id="c8M-if-Abc"/>
                 <outlet property="questionLabel" destination="tCY-Ns-ouO" id="SdD-6h-Y9e"/>
             </connections>
