@@ -25,10 +25,10 @@
                                 <rect key="frame" x="16" y="8" width="341" height="32"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nE3-FX-bt1">
-                                        <rect key="frame" x="95.5" y="-100" width="150" height="100"/>
+                                        <rect key="frame" x="95.5" y="-150" width="150" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="nE3-FX-bt1" secondAttribute="height" multiplier="3:2" id="4ok-eh-Hym"/>
-                                            <constraint firstAttribute="height" constant="100" id="fgY-sP-fbF"/>
+                                            <constraint firstAttribute="width" secondItem="nE3-FX-bt1" secondAttribute="height" multiplier="1:1" id="4ok-eh-Hym"/>
+                                            <constraint firstAttribute="height" constant="150" id="fgY-sP-fbF"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evV-92-ivA">
