@@ -151,7 +151,7 @@ extension HomeView: SelfiePopUpViewControllerDelegate, TextFieldTableViewCellDel
     }
     
     func changeEnableSendButton(){
-        guard let _ = self.image, self.name?.trimmingCharacters(in: .whitespaces) != "" else{
+        guard let _ = self.image,let _ = self.name, self.name?.trimmingCharacters(in: .whitespaces) != "" else{
             sendButton.isEnabled = false
             return
         }
