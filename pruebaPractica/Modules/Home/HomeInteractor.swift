@@ -37,7 +37,3 @@ class HomeInteractor: HomeInteractorInputProtocol {
         
     }
 }
-
-extension HomeInteractor: HomeServiceOutputProtocol {
-    // TODO: Implement use case methods
-}

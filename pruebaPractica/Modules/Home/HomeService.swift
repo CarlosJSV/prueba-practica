@@ -9,7 +9,5 @@
 import Foundation
 
 class HomeService:HomeServiceInputProtocol {
-    
-    var interactor: HomeServiceOutputProtocol?
-    
+        
 }

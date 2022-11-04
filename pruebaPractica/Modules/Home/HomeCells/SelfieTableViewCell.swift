@@ -15,12 +15,15 @@ class SelfieTableViewCell: UITableViewCell, ReusableCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var selfieButton: UIButton!
+    @IBOutlet weak var selfieImage: UIImageView!
     
     var delegate: SelfieTableViewCellDelegate?
+    public var image: UIImage?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        //setImage()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,7 +45,17 @@ class SelfieTableViewCell: UITableViewCell, ReusableCell {
         selfieButton.layer.cornerRadius = 12
     }
     
+    public func setImage() {
+        if let image = self.image {
+            self.selfieImage.isHidden = false
+            DispatchQueue.main.async {
+                self.selfieImage.image = image
+            }
+        }
+    }
+    
     @IBAction func onClickTakePhoto(_ sender: Any) {
         delegate?.takePhoto()
     }
+
 }

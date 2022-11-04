@@ -16,7 +16,7 @@ class HomeWireFrame: HomeWireFrameProtocol {
     class func createHomeModule() -> UIViewController {
         
             let view = HomeView(nibName: "HomeView", bundle: nil)
-            let interactor: HomeInteractorInputProtocol & HomeServiceOutputProtocol = HomeInteractor()
+            let interactor: HomeInteractorInputProtocol = HomeInteractor()
             let service: HomeServiceInputProtocol = HomeService()
             let wireFrame = HomeWireFrame()
             let presenter = HomePresenter(interface: view, interactor: interactor, wireFrame: wireFrame)
@@ -24,7 +24,6 @@ class HomeWireFrame: HomeWireFrameProtocol {
             view.presenter = presenter
             interactor.presenter = presenter
             interactor.service = service
-            service.interactor = interactor
             wireFrame.viewController = view
             
             return view

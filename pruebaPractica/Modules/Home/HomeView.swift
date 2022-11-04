@@ -21,6 +21,7 @@ class HomeView: UIViewController {
     var image: UIImage?
     var name: String?
     var ref: DatabaseReference!
+    var indexPath: IndexPath!
 
     // MARK: Lifecycle
 
@@ -34,6 +35,7 @@ class HomeView: UIViewController {
     private func setupUI() {
         sendButton.layer.cornerRadius = sendButton.frame.height / 2
         self.title = "Vista Inicio"
+        sendButton.isEnabled = false
     }
     
     private func setupReference(){
@@ -47,9 +49,8 @@ class HomeView: UIViewController {
         })
     }
     
-    
     @IBAction func onClickSend(_ sender: Any) {
-        if let image = image, let name = name {
+        if let image = image, let name = name, name.trimmingCharacters(in: .whitespaces) != "" {
             activityIndicator.startAnimating()
             sendButton.isEnabled = false
             presenter?.uploadPhoto(image: image, name: name)
@@ -90,6 +91,9 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SelfieTableViewCell.identifier, for: indexPath) as? SelfieTableViewCell else {
                 return UITableViewCell()
             }
+            cell.image = self.image
+            cell.setImage()
+            self.indexPath = indexPath
             cell.delegate = self
             return cell
         case 2:
@@ -137,10 +141,21 @@ extension HomeView: SelfieTableViewCellDelegate {
 extension HomeView: SelfiePopUpViewControllerDelegate, TextFieldTableViewCellDelegate {
     func setName(name: String) {
         self.name = name
+        changeEnableSendButton()
     }
     
     func setImage(image: UIImage) {
         self.image = image
+        self.tableView.reloadRows(at: [self.indexPath!], with: .none)
+        changeEnableSendButton()
+    }
+    
+    func changeEnableSendButton(){
+        guard let _ = self.image, self.name?.trimmingCharacters(in: .whitespaces) != "" else{
+            sendButton.isEnabled = false
+            return
+        }
+        sendButton.isEnabled = true
     }
     
 }

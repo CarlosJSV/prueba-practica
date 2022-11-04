@@ -52,9 +52,4 @@ protocol HomeInteractorInputProtocol: AnyObject {
 
 protocol HomeServiceInputProtocol: AnyObject {
     // INTERACTOR -> SERVICE
-    var interactor: HomeServiceOutputProtocol? { get set }
-}
-
-protocol HomeServiceOutputProtocol: AnyObject {
-    // SERVICE -> INTERACTOR
 }

@@ -45,8 +45,9 @@ class SelfiePopUpViewController: UIViewController {
     }
     @IBAction func onClickShow(_ sender: Any) {
         if let image = self.image {
-            self.selfieImage.isHidden = false
-            self.showButton.isHidden = false
+            selfieImage.isHidden = false
+            showButton.isHidden = true
+            
             DispatchQueue.main.async {
                 self.selfieImage.image = image
             }
@@ -111,8 +112,9 @@ extension SelfiePopUpViewController: UINavigationControllerDelegate, UIImagePick
             DispatchQueue.main.async {
                 self.selfieImage.image = image
             }
+        }else{
+            self.showButton.isHidden = false
         }
-        self.showButton.isHidden = false
         takeButton.setTitle("Retomar", for: .normal)
         self.delegate?.setImage(image: image)
     }
