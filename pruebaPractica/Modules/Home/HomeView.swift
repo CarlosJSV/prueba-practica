@@ -50,12 +50,10 @@ class HomeView: UIViewController {
     }
     
     @IBAction func onClickSend(_ sender: Any) {
-        if let image = image, let name = name, name.trimmingCharacters(in: .whitespaces) != "" {
+        if let image = image, let name = name{
             activityIndicator.startAnimating()
             sendButton.isEnabled = false
             presenter?.uploadPhoto(image: image, name: name)
-        }else{
-            presenter?.showAlert(title: "Advertencia", message: "Segurece de seleccinar una foto y haber ingresado su nombre")
         }
     }
 }
